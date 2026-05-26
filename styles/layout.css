@@ -1,0 +1,126 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid rgba(217, 223, 212, 0.8);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1120px, calc(100% - 32px));
+  height: 68px;
+  margin: 0 auto;
+}
+
+.site-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-logo-image {
+  width: 112px;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-logo-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--color-border-strong);
+}
+
+.site-logo-text {
+  color: var(--color-text-strong);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav-link {
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: var(--color-text-sub);
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.site-nav-link:hover {
+  background: var(--color-brand-soft);
+  color: var(--color-brand-dark);
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: #ffffff;
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px 0;
+}
+
+.site-footer-brand {
+  margin: 0;
+  color: var(--color-text-strong);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.site-footer-text {
+  margin: 8px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.site-footer-copy {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 620px) {
+  .site-header-inner {
+    width: min(100% - 24px, 1120px);
+    height: 64px;
+  }
+
+  .site-logo-image {
+    width: 92px;
+  }
+
+  .site-logo-divider,
+  .site-logo-text {
+    display: none;
+  }
+
+  .site-nav {
+    gap: 2px;
+  }
+
+  .site-nav-link {
+    padding: 9px 8px;
+    font-size: 13px;
+  }
+
+  .site-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
