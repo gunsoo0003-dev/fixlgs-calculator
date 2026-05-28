@@ -3,3 +3,56 @@
 @import '../styles/layout.css';
 @import '../styles/home.css';
 @import '../styles/area-calculator.css';
+
+/* Footer policy links */
+.fix-footer-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.fix-footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.fix-footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fix-footer-copy {
+  margin: 0;
+  font-weight: 400;
+  color: var(--color-text-sub);
+}
+
+.fix-footer-right a {
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+.fix-footer-right a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .fix-footer-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fix-footer-right {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+}
